@@ -1,5 +1,5 @@
 # Finance Model
---------------
+
 Code models two investment strategies
 1) Buy real estate
 2) Invest in the stock market
