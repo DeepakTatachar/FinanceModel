@@ -31,16 +31,16 @@ class sim():
         print("Diff Real - Stock: ${:.2f}".format(gain1 - gain2))
 
 downpayment = 0.2
-down_pay = 25000
+down_pay = 40000
 total = down_pay / downpayment
 intr_rate = 0.02875
 years = 30
 one_time_costs = 5800
 expted_house_rent = 1200
 self_rent = 1350
-self_rent_years = 3
+self_rent_years = 2
 real_estate_roi = 0.03
-stock_market_roi = 0.15
+stock_market_roi = 0.1
 rent_occupancy_rate = 0.7
 
 fixed_30_year_mortgage = Mortgage(downpayment=downpayment,
