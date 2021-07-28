@@ -18,7 +18,7 @@ set the paramters in compare.py and use the following command
 python compare.py
 ```
 
-The output looks some thinlike this
+The output looks something like this
 ```
 663.8279633217539
 Month: 0 Assets Real Estate: $ 200000.00  Liability Real Estate: $ 165800.00 |  Assets Stock Market: $ 45800.00  Liability Stock Market: $ 0.00
