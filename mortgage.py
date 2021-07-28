@@ -4,7 +4,8 @@ class Mortgage():
                  intr_rate, 
                  total_amount,
                  years,
-                 one_time=5800):
+                 one_time=5800,
+                 misc_emi=310):
 
         self.downpayment = downpayment * total_amount
         self.rate = intr_rate
@@ -16,9 +17,8 @@ class Mortgage():
         self.monthly_rate = self.rate / 12
         self.emi = self.get_emi()
         self.total_amount = total_amount
-        self.misc_emi = 310
+        self.misc_emi = misc_emi
         self.one_time = one_time
-        
 
     def get_emi(self):
         '''

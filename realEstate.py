@@ -1,3 +1,4 @@
+from mortgage import Mortgage
 from baseModel import BaseModel
 
 class realEstateModel(BaseModel):
@@ -42,7 +43,10 @@ class realEstateModel(BaseModel):
         '''
         returns the interest rate for a given month
         '''
-        liability = (self.mortgage.emi + self.mortgage.misc_emi) * month   + self.mortgage.one_time
+        if(month > self.mortgage.n):
+            month = self.mortgage.n
+
+        liability = (self.mortgage.emi + self.mortgage.misc_emi) * month + self.mortgage.one_time
         outstanding_principal = self.mortgage.principal
         
         for i in range(month):
