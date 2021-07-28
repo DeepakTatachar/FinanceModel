@@ -13,7 +13,7 @@ Supports a buch of paramters (does not model inflation) to compare (1) with (2)
 
 How to run?
 ------------
-set the paramters in compare.py and use the following command
+set the parameters in compare.py and use the following command
 ```
 python compare.py
 ```

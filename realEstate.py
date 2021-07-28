@@ -11,8 +11,8 @@ class realEstateModel(BaseModel):
                  sale_year=5,
                  self_rent_period=3,
                  exp_rent=1200,
-                 inflation=0.02,
-                 occupancy_rate=0.8):
+                 occupancy_rate=0.8,
+                 rent_inflation_rate=0.03):
 
             self.name = name
             self.mortgage = mortgage
@@ -22,9 +22,9 @@ class realEstateModel(BaseModel):
             self.sale_year = sale_year
             self.self_rent_period = self_rent_period * 12
             self.exp_rent = exp_rent
-            self.inflation = inflation
             self.monthly_roi = self.get_monthly_rate_for_annual_rate(self.roi)
             self.occupancy_rate = occupancy_rate
+            self.rent_inflation_rate = self.get_monthly_rate_for_annual_rate(rent_inflation_rate)
 
     def get_assets_for_month(self, month):
         '''
@@ -34,8 +34,18 @@ class realEstateModel(BaseModel):
         assets = property_value
 
         if(month > self.self_rent_period):
+            '''
+            How many months is it being rented out for?
+            If you set self_rent_period, it assumes the first self_rent_period months 
+            are paid by the owner.
+            '''
             rent_out_period = month - self.self_rent_period
-            assets = assets  + self.exp_rent * rent_out_period * self.occupancy_rate
+            rent_collected = 0
+
+            for m in range(rent_out_period):
+                rent_collected += self.exp_rent * ( (1 + self.rent_inflation_rate) ** m) * self.occupancy_rate
+            
+            assets = assets  + rent_collected
             
         return assets
 
