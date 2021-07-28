@@ -9,12 +9,12 @@ How many years to model?
 sim_years = 5
 
 '''
-What is the percentage of the downpayemnt?
+What is the percentage of the downpayment?
 '''
 downpayment = 0.2
 
 '''
-What is the downpayement amount
+What is the downpayment amount
 '''
 down_pay = 40000
 total = down_pay / downpayment
@@ -31,7 +31,7 @@ One time costs associated with the mortgage, such as bank fees, etc.
 one_time_costs = 5800
 
 '''
-What is the miscaleanous cost of the mortgage that does not go towards the mortgage?
+What is the miscellaneous cost of the mortgage that does not go towards the mortgage?
 For example tax and hazardous insurance
 '''
 misc_emi = 310
@@ -47,7 +47,7 @@ How much rent are saving when you stay in the house
 self_rent = 1350
 
 '''
-Paramter sets how many years do you plan on staying in the house
+Parameter sets how many years do you plan on staying in the house
 FOr example if sim_years = 5, and self_rent_years = 3, 
 then you will be stay in the house for 3 years, but will own the house for 5 years
 '''
