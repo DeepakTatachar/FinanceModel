@@ -4,7 +4,7 @@ Code models two investment strategies
 1) Buy real estate
 2) Invest in the stock market
 
-Supports a buch of paramters (does not model inflation) to compare (1) with (2)
+Supports a bunch of paramters (does not model inflation) to compare (1) with (2)
 
 * (1) Is modelled in realEstate.py
 * (2) Is modelled in stockMarket.py
