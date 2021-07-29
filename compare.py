@@ -3,6 +3,7 @@ from models.mortgage import Mortgage
 from models.stockMarket import stockMarketModel
 from simulator import Simulator
 from observers.printObserver import PrintObserver
+from observers.graphObserver import GraphObserver
 
 '''
 How many years to model?
@@ -99,6 +100,14 @@ stockMarket = stockMarketModel("Stock Market",
                                rent_inflation_rate=rent_inflation)
 
 printObserver = PrintObserver()
+graphObserver = GraphObserver()
+
 simulator = Simulator(models=[realEstate, stockMarket])
+
 simulator.add_observer(printObserver)
+simulator.add_observer(graphObserver)
+
+'''
+Run simulator
+'''
 simulator.run(months=(sim_years*12))
