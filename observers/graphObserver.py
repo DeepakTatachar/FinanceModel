@@ -26,6 +26,8 @@ class GraphObserver(BaseObserver):
             plt.plot(months, gains[model_idx], label=model.name)
 
         plt.legend(loc='upper left')
+        plt.xlabel('Months')
+        plt.ylabel('Gains in $')
         plt.show()
 
 

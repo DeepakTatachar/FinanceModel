@@ -8,7 +8,7 @@ from observers.graphObserver import GraphObserver
 '''
 How many years to model?
 '''
-sim_years = 5
+sim_years = 13
 
 '''
 What is the percentage of the downpayment?
@@ -46,14 +46,14 @@ expted_house_rent = 1200
 '''
 How much rent are saving when you stay in the house
 '''
-self_rent = 1350
+self_rent = 1200
 
 '''
 Parameter sets how many years do you plan on staying in the house
 FOr example if sim_years = 5, and self_rent_years = 3, 
 then you will be stay in the house for 3 years, but will own the house for 5 years
 '''
-self_rent_years = 3
+self_rent_years = 20
 
 '''
 Expected annual return on the investment for the house 
@@ -64,7 +64,7 @@ real_estate_roi = 0.03
 '''
 Expected annual return on the investment for the stock market
 '''
-stock_market_roi = 0.1
+stock_market_roi = 0.15
 
 
 '''
