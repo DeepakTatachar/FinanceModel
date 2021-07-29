@@ -1,4 +1,4 @@
-from baseModel import BaseModel
+from models.baseModel import BaseModel
 
 class stockMarketModel(BaseModel):
     def __init__(self,

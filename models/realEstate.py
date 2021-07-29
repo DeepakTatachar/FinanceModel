@@ -1,5 +1,4 @@
-from mortgage import Mortgage
-from baseModel import BaseModel
+from models.baseModel import BaseModel
 
 class realEstateModel(BaseModel):
     def __init__(self,

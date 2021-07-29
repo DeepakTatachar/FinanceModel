@@ -1,7 +1,8 @@
-from realEstate import realEstateModel
-from mortgage import Mortgage
-from stockMarket import stockMarketModel
+from models.realEstate import realEstateModel
+from models.mortgage import Mortgage
+from models.stockMarket import stockMarketModel
 from simulator import Simulator
+from observers.printObserver import PrintObserver
 
 '''
 How many years to model?
@@ -97,5 +98,7 @@ stockMarket = stockMarketModel("Stock Market",
                                roi=stock_market_roi,
                                rent_inflation_rate=rent_inflation)
 
-simulator = Simulator(realEstate, stockMarket)
+printObserver = PrintObserver()
+simulator = Simulator(models=[realEstate, stockMarket])
+simulator.add_observer(printObserver)
 simulator.run(months=(sim_years*12))
